@@ -4,7 +4,7 @@ exports.usernamesGet = (req, res) => {
 };
 
 exports.usernamesNewGet = (req, res) => {
-  res.send("form sent");
+  res.render("addUsername", { title: "Add new Username" });
 };
 
 exports.usernamesNewPost = (req, res) => {
