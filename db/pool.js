@@ -24,3 +24,8 @@ module.exports = new Pool({
 // module.exports = new Pool({
 //   connectionString: "postgresql://kratos:Soham%231345@localhost:5432/top_users",
 // });
+
+//pool is pool of connections and it user any that
+//is available
+//can use pool.query directly
+//or pool.connect returns a client
