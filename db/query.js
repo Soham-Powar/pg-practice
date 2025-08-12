@@ -13,3 +13,7 @@ module.exports = {
   getAllUsernames,
   insertUsername,
 };
+
+//this queries the db with any available clients
+//for transactions use the same client
+//by using pool.connect
