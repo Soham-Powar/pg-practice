@@ -13,11 +13,11 @@ const { Pool } = require("pg");
 // });
 
 module.exports = new Pool({
-  host: "localhost",
-  user: "kratos",
-  database: "top_users",
-  password: "Soham#1345",
-  port: 5432,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: process.env.DB_PORT,
 });
 
 // Again, this should be read from an environment variable

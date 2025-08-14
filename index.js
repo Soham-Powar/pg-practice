@@ -1,4 +1,7 @@
+require("dotenv").config();
+
 const express = require("express");
+
 const path = require("node:path");
 const usernamesRouter = require("./routes/usernamesRouter");
 const app = express();
@@ -13,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use("/", usernamesRouter);
 
-const PORT = 3023;
+const PORT = 3055;
 app.listen(PORT, () => {
   console.log("here we go");
 });
