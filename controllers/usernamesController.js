@@ -15,3 +15,8 @@ exports.usernamesNewPost = async (req, res) => {
   await db.insertUsername(username);
   res.redirect("/");
 };
+
+exports.usernamesDeleteGet = async (req, res) => {
+  await db.deleteAllUsernames();
+  res.redirect("/");
+};
