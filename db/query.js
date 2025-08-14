@@ -1,6 +1,13 @@
 const pool = require("./pool");
 
-async function getAllUsernames() {
+async function getAllUsernames(searchTerm) {
+  if (searchTerm) {
+    const { rows } = await pool.query(
+      "SELECT * FROM usernames WHERE username ILIKE $1",
+      [`%${searchTerm}%`]
+    );
+    return rows;
+  }
   const { rows } = await pool.query("SELECT * FROM usernames");
   return rows;
 }

@@ -1,7 +1,8 @@
 const db = require("../db/query");
 
 exports.usernamesGet = async (req, res) => {
-  const usernames = await db.getAllUsernames();
+  const searchTerm = req.query.search || "";
+  const usernames = await db.getAllUsernames(searchTerm);
   res.send("Usernames: " + usernames.map((user) => user.username).join(", "));
 };
 
